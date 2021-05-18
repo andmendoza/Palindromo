@@ -1,9 +1,12 @@
 def palindromo():
     word = input("Enter your word: ")
-    if word == word[::-1]:
-        print(word, " is a palindromo")
+    word = word.replace(' ', '')
+    word = word.upper()
+    word_inverted = word[::-1]
+    if word == word_inverted:
+        print(word, ", is a palindromo")
     else:
-        print(word, "it's not palindromo")
+        print(word, ",it's not palindromo")
 
 def main():
     palindromo()
